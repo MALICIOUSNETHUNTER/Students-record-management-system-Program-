@@ -25,8 +25,7 @@ node *reverse(node *);
 int main()
 {
     int choice, data, item, pos;
-    node *start;
-
+    node *start = NULL;
     do
     {
         printf("STUDENT RECORDS\n");
@@ -68,11 +67,11 @@ int main()
             break;
 
         case 5:
-            addatbeg(start);
+            start = addatbeg(start);
             break;
 
         case 6:
-            addatend(start);
+            start = addatend(start);
             break;
 
         case 7:
@@ -478,4 +477,5 @@ node *reverse(node *start)
     }
     start = prev;
     return start;
+
 }
